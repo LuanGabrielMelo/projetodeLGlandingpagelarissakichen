@@ -1,0 +1,86 @@
+header{
+    text-decoration: none;
+    width: 100%;
+    padding: 28px 8%;   
+    /* background-color: rgb(192, 199, 204); */
+    color: #1d1d1dad;
+    position:sticky;/* trava o header para que ele fique no seu local idependente da rolagem da pagina */
+    top: 0;/* mantem header grudado no topo */
+    background-color: #fff9ea;/*nessecario nesse caso para não deixar o header transparente */
+    z-index: 3;/* mantem a sobreposição do header(profundidade), sem ele por mais que esteja estatico alguns elementos apos a rolagem  pode passar por cima*/
+}
+
+#navbar{
+    width: 100%;
+    display: flex;/* alinha lado a lado*/
+    align-items: center;
+    justify-content: space-between;/* joga os itens para os estremos( espalhar os itens na pagina nessa situação)*/
+}
+#nav_logo{
+    font-size: 24px;
+    color: #e9a209;
+}
+#nav_logo:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+#nav_list{
+    display: flex; /* alinha lado a lado*/
+    list-style: none; /* retira oas pontos e as caracteristicas  de um listamento*/
+    gap: 48px;
+}
+.nav-item {
+    text-decoration: none;
+}
+.nav-item a {
+   text-decoration: none;
+   color: #1d1d1dad;
+   font-weight: 600;
+}
+.nav-item.active a {
+    color: #1d1d1d;
+    border-bottom: 5px solid #ffe100;
+}
+#mobile_btn{
+    display: none;
+}
+#mobile_menu{
+    display: none;
+}
+@media screen and (max-width:1170px) {
+    #nav_list,
+    #navbar .btn-default{
+        display: none;
+    }
+    
+    #mobile_btn{
+        display: block;/* trava o botão na tela */
+        border: none;/* tira as bordas do botão */
+        background-color: transparent;/* deixa a borda transparente */
+        font-size: 1.5rem;/*aumenta a fote */
+        cursor: pointer;/*muda a forma do cursor*/
+    }
+    #mobile_btn:hover{
+        transform: scale(1.2);
+    }
+    #mobile_menu.active{
+        display: flex;/* alinha lado a lado*/
+        flex-direction: column;/*mostra as colunas ocultas*/
+        align-items: center;
+    }
+    
+    #mobile_nav_list{
+        display: flex;/* alinha lado a lado*/
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+    #mobile_nav_list .nav-item{
+      list-style: none;
+      text-align: center;
+
+    }
+    #mobile-nav-item:hover{
+        transform: scale(1.2);
+    }
+}
