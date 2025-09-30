@@ -16,6 +16,9 @@
     text-decoration: none;
     color: #1d1d1d;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #fff9ea;
 
@@ -37,7 +40,7 @@ section{
     transition: backgroud-color .3s ease;
 }
 .btn-default:hover{
-    background-color: #f8d477;
+    background-color: #ffe100;
     transform: scale(1.2);
 }
 
