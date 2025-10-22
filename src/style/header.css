@@ -9,7 +9,17 @@ header{
     background-color: #fff9ea;/*nessecario nesse caso para não deixar o header transparente */
     z-index: 3;/* mantem a sobreposição do header(profundidade), sem ele por mais que esteja estatico alguns elementos apos a rolagem  pode passar por cima*/
 }
-
+header a {
+  text-decoration: none;    /* remove underline */
+  color: #1d1d1dad;             /* define cor padrão */
+}
+header a:visited {
+  color: #1d1d1dad;
+}
+header.active a {
+    color: #1d1d1d;
+    border-bottom: 5px solid #ffe100;
+}
 #navbar{
     width: 100%;
     display: flex;/* alinha lado a lado*/
